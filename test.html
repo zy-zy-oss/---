@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function myFunction(){
+    var a = 4;
+    return a*a
+}
+var add = (function(){
+    var counter = 0;
+    return function(){return counter +=1}
+})();
+add();
+console.log(add())   
+
+function Person(a){
+    Person.prototype.name='ww'
+    Person.prototype.age='w1w'
+    Person.prototype.sex='w2w'
+    this.A = a
+}
+//prototype是一个指针指向构造函数的原型对象，使用原型对象的好处是可以让所有对象实例共享它所包含的属性和方法。
+//换句话说，不必在构造函数中定义对象的实力信息，而是可以将这些信息直接添加到原型对象上
+var person1 = new Person(1);
+console.log(person1);
+console.log(person1.name);
+console.log(Person.prototype.constructor==Person,Person.prototype,'q',Person)
+var person2 = new Person();
+
+    </script>
+</body>
+</html>
